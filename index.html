@@ -8,12 +8,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Dancing+Script&family=Satisfy&display=swap">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Dancing+Script&family=Satisfy&display=swap" rel="stylesheet">
+    <style>
+      .no-flash { opacity: 0; }
+      .loaded { opacity: 1; transition: opacity 0.3s; }
+    </style>
 </head>
 <body>
     <header>
-        <div class="container">
+        <div class="container no-flash" id="header-content">
             <h1>ira <span class="highlight">nathan</span> cole</h1>
             <p class="subtitle">springfield, mo</p>
             <div class="email-link">
@@ -25,5 +31,12 @@
     </header>
 
     <script src="js/main.js"></script>
+    <script>
+        // Font loading handler
+        document.fonts.ready.then(function() {
+            // Once fonts are loaded, show the content
+            document.getElementById('header-content').classList.add('loaded');
+        });
+    </script>
 </body>
 </html>
