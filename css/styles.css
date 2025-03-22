@@ -74,6 +74,8 @@ header h1 {
 .email-link {
   margin-top: 1rem;
   margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
 }
 
 .email-link a {
