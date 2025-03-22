@@ -6,6 +6,7 @@
   --success-color: #28a745;
   --danger-color: #dc3545;
   --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-handwritten: 'Caveat', 'Satisfy', 'Dancing Script', cursive;
 }
 
 * {
@@ -53,15 +54,50 @@ header {
 }
 
 header h1 {
-  font-size: 4rem;
+  font-size: 4.5rem;
   margin-bottom: 1rem;
-  font-weight: 800;
+  font-weight: 400;
+  font-family: var(--font-handwritten);
+  letter-spacing: 1px;
+  text-transform: none;
 }
 
 .subtitle {
-  font-size: 1.5rem;
-  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
   font-weight: 300;
+  font-family: var(--font-handwritten);
+  letter-spacing: 0.5px;
+  opacity: 0.9;
+}
+
+.email-link {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.email-link a {
+  color: white;
+  font-size: 1.5rem;
+  opacity: 1;
+  transition: all 0.3s ease;
+  display: inline-block;
+  padding: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.email-link a:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  border-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 /* About Section */
